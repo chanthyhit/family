@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'KhmerOSmuolpali';
+    src: url('./KhmerOSmuolpali.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'KhmerOSbattambang';
+    src: url('./KhmerOSbattambang.ttf') format('truetype');
+}
+
+body {
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    font-family: 'KhmerOSbattambang', Arial, sans-serif;
+}
+
+.title_box {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: purple;
+}
+
+.title {
+    margin: 0;
+    font-family: 'KhmerOSmuolpali';
+    color: white;
+}
+
+.container_title {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    transition: transform 0.5s ease-in-out;
+}
+
+.container_title.hidden {
+    transform: translateY(-100%);
+}
+
+.container {
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tree {
+    --line: 4px;
+}
+
+ul {
+    padding-left: 5px;
+}
+
+ul ul {
+    margin: 10px 0 10px 0;
+    border-left: var(--line) solid blue;
+}
+
+ul ul ul {
+    margin: 10px 0 10px 0;
+    border-left: var(--line) solid #d15a15;
+}
+
+ul ul ul ul {
+    margin: 10px 0 10px 0;
+    border-left: var(--line) solid purple;
+}
+
+ul ul ul ul ul {
+    margin: 10px 0 10px 0;
+    border-left: var(--line) solid green;
+}
+
+ul ul ul ul ul ul {
+    margin: 10px 0 10px 0;
+    border-left: var(--line) solid #eb34bd;
+}
+
+li {
+    margin-bottom: 10px;
+    list-style-type: none;
+    display: flex;
+    align-items:start;
+    margin: 10px 0 10px 0;
+}
+
+img { border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#option {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#option label {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+#option label:nth-child(4),
+#option label:nth-child(6),
+#option label:nth-child(8),
+#option label:nth-child(10),
+#option label:nth-child(12) {
+    color: var(--color);
+}
+
+#toggleG,
+#toggleG1,
+#toggleG2,
+#toggleG3,
+#toggleG4,
+#toggleG5 {
+    accent-color: var(--accent-color);
+}
+
+#toggleG { --accent-color: black; }
+#toggleG1 { --accent-color: blue; }
+#toggleG2 { --accent-color: #d15a15; }
+#toggleG3 { --accent-color: purple; }
+#toggleG4 { --accent-color: green; }
+#toggleG5 { --accent-color: #eb34bd; }
+
+#option label:nth-child(4) { --color: blue; }
+#option label:nth-child(6) { --color: #d15a15; }
+#option label:nth-child(8) { --color: purple; }
+#option label:nth-child(10) { --color: green; }
+#option label:nth-child(12) { --color: #eb34bd; }
